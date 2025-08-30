@@ -1,5 +1,5 @@
-use lv2::prelude::*;
 use log::info;
+use lv2::prelude::*;
 
 // The input and output ports.
 #[derive(PortCollection)]
@@ -12,12 +12,10 @@ struct XorCrusherPorts {
 }
 
 #[derive(FeatureCollection)]
-struct Features {
-}
+struct Features {}
 
-#[uri("http://example.com/xor_crusher")]
-struct XorCrusher {
-}
+#[uri("https://github.com/kassoulet/xor-crusher")]
+struct XorCrusher {}
 
 impl Plugin for XorCrusher {
     type Ports = XorCrusherPorts;

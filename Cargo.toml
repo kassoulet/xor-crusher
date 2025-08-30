@@ -17,4 +17,4 @@ codegen-units = 1
 opt-level = 3
 
 [package.metadata.lv2]
-uri = "http://example.com/xor_crusher"
+uri = "https://github.com/kassoulet/xor-crusher"
