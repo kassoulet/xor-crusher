@@ -40,7 +40,7 @@ impl Plugin for XorCrusher {
 
         // Determine the bit shift amount.
         // A shift of 32 or more would zero out the number, so handle that.
-        let shift = if bits > 32 { 0 } else { 32 - bits };
+        let shift = 32u32.saturating_sub(bits);
 
         // Process each sample in the block.
         for (i, (in1_sample, in2_sample)) in ports
