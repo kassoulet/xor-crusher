@@ -1,0 +1,20 @@
+[package]
+name = "xor_crusher"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+lv2 = { version = "0.6.0", features = ["full"] }
+log = "0.4"
+
+[lib]
+crate-type = ["cdylib"]
+
+[profile.release]
+strip = true
+lto = "fat"
+codegen-units = 1
+opt-level = 3
+
+[package.metadata.lv2]
+uri = "http://example.com/xor_crusher"
